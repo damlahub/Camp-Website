@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <section id="intro">
-        <article class="intro-content hidden">
-        </article>
-        <video autoplay loop  muted>
-          <source src="assets/intro/intro.mp4" type="video/mp4">
-        </video>
+    <section class="container">
+    <section class="pages">
+        <section id="intro" class="page">
+            <button onclick="slide('next')">Ana Menü</button>
+            <article class="intro-content intro-hidden">
+            </article>
+            <video autoplay loop muted>
+                <source src="assets/intro/intro.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section id="home-page" class="page">
+            <h1>DAMLA</h1>
+        </section>
     </section>
+</section>
+
     <script src="apps/intro-settings.js"></script>
     <script src="apps/intro.js"></script>
 </body>
+
 </html>
