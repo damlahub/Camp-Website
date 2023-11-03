@@ -5,28 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <section class="container">
-    <section class="pages">
-        <section id="intro" class="page">
-            <button onclick="slide('next')">Ana Menü</button>
-            <article class="intro-content intro-hidden">
-            </article>
-            <video autoplay loop muted>
-                <source src="assets/intro/intro.mp4" type="video/mp4">
-            </video>
-        </section>
-        <section id="home-page" class="page">
-            <h1>DAMLA</h1>
+        <section class="pages">
+            <!-- INTRO -->
+            <section id="intro" class="page">
+                <button id="btn-next-menu">Atla</button>
+                <article class="intro-content intro-hidden">
+                </article>
+                <video autoplay muted>
+                    <source src="assets/intro/intro.mp4" type="video/mp4">
+                </video>
+            </section>
+            <!-- HOME PAGE -->
+            <section id="home-page" class="page">
+                <header class="home-page-header">
+                    <section class="header-logo">
+                        <a href="#">
+                            <img src="assets/logo.png" alt="keyfkamp">
+                            <h1>KeyfKamp</h1>
+                        </a>
+                    </section>
+                    <nav class="header-nav">
+                        <ul>
+                            <!--
+                            <li><a href="">Ana Sayfa</a></li>
+                            <li><a href="">Kamp Alanı</a></li>
+                            <li><a href="">Konaklama</a></li>
+                            <li><a href="">Etkinlikler</a></li>
+                            <li><a href="">Restoran</a></li>
+                            <li><a href="">Galeri</a></li>
+                            <li><a href="">Konum</a></li>
+                         -->
+                        </ul>
+                    </nav>
+                    <button class="btn-standart-sm rez">
+                        <i class="fa-solid fa-campground" style="color: var(--dark-green);"></i>
+                        Rezervasyon
+                    </button>
+                </header>
+                <main>
+                    <!-- Single Slider -->
+                    <section id="single-slider">
+                        <h2>Merhaba Kamp Severler!</h2>
+                        <p>
+                            Doğanın kucakladığı bu özel kamp alanında sizi ağırlamaktan mutluluk duyuyoruz! Şehir
+                            gürültüsünden uzak, yıldızlar altında keyifli anlar için hazır mısınız? Rezervasyonunuzu
+                            yaptırın, doğayla buluşmanın tadını çıkarın!
+                        </p>
+                        <button class="btn-standart">
+                            Rezervasyon Yap
+                        </button>
+                    </section>
+                    <section id="etkinlik">
+                        <article class="slider-container">
+                            <article class="slider">
+                                <img src="assets/slider/1.jpg" alt="">
+                                <img src="assets/slider/4.jpg" alt="">
+                                <img src="assets/slider/3.jpg" alt="">
+                                <img src="assets/slider/2.jpg" alt="">
+                            </article>
+                        </article>
+                    </section>
+                </main>
+            </section>
         </section>
     </section>
-</section>
-
+    <script src="https://kit.fontawesome.com/bb9da9ae22.js" crossorigin="anonymous"></script>
     <script src="apps/intro-settings.js"></script>
     <script src="apps/intro.js"></script>
+    <script src="apps/slider.js"></script>
+    <script src="apps/header-nav-settings.js"></script>
 </body>
 
 </html>
