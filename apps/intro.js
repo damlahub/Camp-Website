@@ -2,10 +2,8 @@ window.onload = () => {
     const INTRO = document.querySelector("#intro");
     const INTRO_VIDEO = document.querySelector("#intro>video");
     let _introContent = document.querySelector(".intro-content");
-    let _pages = document.querySelectorAll(".page");
     let btnNextMenu = document.querySelector("#btn-next-menu");
-    let translate = 0;
-    let translateAmount = 100;
+    let container=document.querySelector(".container");
 
     btnNextMenu.addEventListener("click", () => {
         slide();
@@ -28,27 +26,17 @@ window.onload = () => {
     <h1>${INTRO_TEXT}</h1>`;
     }, INTRO_TEXT_TIME);
 
-        INTRO_VIDEO.onended = () => {
-            INTRO_VIDEO.currentTime = 28;
-            slide();
-        };
+    INTRO_VIDEO.onended = () => {
+        slide();
+    };
 
     // Slide
+    const innerWidth = window.innerWidth;
     const slide = () => {
-        translate -= translateAmount;
-        _pages.forEach(
-            (_page) => (_page.style.transform = `translateX(${translate}%)`)
-        );
+        INTRO.style.left = `-${innerWidth}px`;
         setTimeout(() => {
-            const HOME_PAGE = document.querySelector("#home-page");
-            const HOME_PAGES = document.querySelector(".pages");
-            const CONTAINER = document.querySelector(".container");
-            HOME_PAGE.style = "";
-            HOME_PAGE.classList.remove("page");
-            HOME_PAGE.style.width = "100%";
-            INTRO.parentNode.removeChild(INTRO);
-            HOME_PAGES.style.width = "100%";
-            CONTAINER.style.overflow = "auto";
-        }, 1000);
+            INTRO.remove();
+            container.style.overflow="auto";
+        }, 2100);
     };
 };

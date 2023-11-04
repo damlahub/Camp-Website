@@ -33,33 +33,28 @@
     background-color: transparent;
     color: var(--white);
 }
-.section-title-left{
-    border-right: 1px solid var(--light-green);
-    width: 20%;
-    height: 100%;
+.section-title-left,
+.section-title-right{
+    border-bottom: 1px solid var(--light-green);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: rotate(270deg);
 }
 .section-title-right{
-    border-left: 1px solid var(--light-green);
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    transform: rotate(-270deg);
 }
 .container {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 /* Slide */
 .pages {
-    width: 200%;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -70,14 +65,18 @@
 
 /* Intro */
 #intro {
-    width: 50%;
+    width: 100%;
     height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    transition: all 1s ease-in;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
     background-color: var(--dark-green-opacity);
+    position: absolute;
+    z-index: 99;
+    left: 0;
 }
 
 .intro-content {
@@ -133,7 +132,7 @@
 
 /* Home Page */
 #home-page {
-    width: 50%;
+    width: 100%;
 }
 
 /* Home Page Header */
@@ -145,6 +144,7 @@
     align-items: center;
     background-color: var(--dark-green-opacity);
     position: fixed;
+    z-index: 80;
 }
 
 .home-page-header .header-logo {
@@ -234,7 +234,7 @@
 /* Slider */
 .slider-container {
     width: 30%;
-    height: 95%;
+    height: 100%;
     overflow: hidden;
     border-radius: 100%;
     box-shadow:  1px 1px 15px 5px  var(--dark-green);
@@ -252,7 +252,6 @@
 }
 .activity-items{
     width: 50%;
-    height: 55vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -302,5 +301,5 @@
     color: var(--dark-green);
 }
 .accommodation-slide{
-    width: 80%;
+    width: 90%;
 }
