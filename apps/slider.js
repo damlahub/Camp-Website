@@ -17,7 +17,7 @@ function prevSlide() {
 }
 function updateSlider() {
   // 4 resmim olduğu için 400 yazdım.
-  const transformValue = -count * 400 / slider.children.length + '%';
+  const transformValue = -count * 300 / slider.children.length + '%';
   // console.log(transformValue);
   slider.style.transform = 'translateX(' + transformValue + ')';
 }
