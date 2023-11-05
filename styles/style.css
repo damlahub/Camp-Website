@@ -45,6 +45,7 @@
     justify-content: center;
     align-items: center;
     transform: rotate(270deg);
+    width: 10%;
 }
 
 .section-title-right {
@@ -265,7 +266,7 @@
 }
 
 .activity-items {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,19 +321,17 @@
 }
 
 .accommodation-flex-slide {
-    width: 90%;
     height: 85vh;
-    display: flex;
 }
 
 .accommodation-flex-slide-item {
-    width: 5%;
+    width: 220px;
     height: 100%;
-    position: relative;
     transition: all 2s;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .accommodation-flex-slide-item img {
@@ -340,40 +339,48 @@
     height: 85vh;
     position: absolute;
     object-fit: cover;
-}
-
+    filter: brightness(0.5);}
 .accommodation-flex-slide-item h1 {
-    position: absolute;
     transform: rotate(180deg);
-    color: white;
+    color: var(--dark-green);
+    background-color: var(--white);
     font-size: 20px;
     text-transform: uppercase;
     writing-mode: vertical-lr;
     transition: all 2s;
-    font-size: 35px;
+    border-radius: 35px;
+    font-size: 25px;
+    padding: 20px 10px;
 }
 
 .flex-slide-item-active {
-    width: 20%;
+    width: 270px;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    opacity: 1;
-}
-.flex-slide-item-active h1{
-    transform: rotate(270deg);
-    writing-mode: vertical;
-    position: relative;
+    right: 0;
+    z-index: 55;
 }
 .flex-slide-item-active p{
     z-index: 55;
-    color: var(--dark-green);
+    background: var(--linear-green);
     font-size: 30px;
-    background-color: var(--white);
-    padding: 10px;
+    padding: 10px 25px;
     border-radius: 35px;
+    font-weight: bold;
+    color: var(--white);
 }
 
-
+.flex-slide-info{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 55;
+}
+.flex-slide-info button{
+    background-color: transparent;
+    color: white;
+}
