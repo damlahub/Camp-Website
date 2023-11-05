@@ -3,14 +3,11 @@ const accommodationArr = [
         image: "assets/flex-slide/1.jpg",
         title: "Günübirlik Giriş",
         price: "100TL"
-
-
     },
     {
         image: "assets/flex-slide/2.jpg",
         title: "Kendi Çadırınızla Konaklama",
         price: "250TL"
-
     },
     {
         image: "assets/flex-slide/3.jpg",
@@ -35,20 +32,23 @@ const accommodationArr = [
 ];
 
 const accommodation = document.querySelector("#accommodation");
-
 const createContent = () => {
     accommodationArr.forEach((arr, index) => {
-        let flexSlide = document.createElement("section");
-        flexSlide.classList.add("accommodation-flex-slide");
+        let flexSlideContent = document.createElement("section");
+        flexSlideContent.classList.add("accommodation-flex-slide-item");
 
-        flexSlide.innerHTML = `
-        <article class="accommodation-flex-slide-item">
-        <img src="${accommodationArr[index].image}" alt="">
-        <h1>${accommodationArr[index].title}</h1>
-        </article>
+        flexSlideContent.innerHTML = `
+                <img src="${accommodationArr[index].image}" alt="">
+                <h1>${accommodationArr[index].title}</h1>
         `;
-        accommodation.append(flexSlide);
+        accommodation.append(flexSlideContent);
     });
+    console.log(accommodationArr.length);
+    setTimeout(() => {
+        let counter = accommodationArr.length;
+        document.querySelectorAll(".accommodation-flex-slide-item")[counter - 1].click();
+    }, 1000);
+
 }
 
 const flexSlideActive = () => {
@@ -60,12 +60,9 @@ const flexSlideActive = () => {
     let flexItems = document.querySelectorAll(".accommodation-flex-slide-item");
 
     flexItems.forEach((flexItem, index) => {
-        let animationInProgress = false;
-
         flexItem.addEventListener("click", () => {
-            if (animationInProgress) {
-                return; 
-            }
+
+
             if (activeFlexItem && activeFlexItem !== flexItem) {
                 activeFlexItem.classList.remove("flex-slide-item-active");
                 flexPrice.remove();
@@ -82,13 +79,9 @@ const flexSlideActive = () => {
 
                 flexInfo.appendChild(flexPrice);
                 flexInfo.appendChild(flexButton);
-                setTimeout(() => {
-                    flexItem.appendChild(flexInfo);
-                    animationInProgress = false;
-                }, 400);
+                flexItem.appendChild(flexInfo);
             } else {
                 flexInfo.remove();
-                animationInProgress = false;
             }
 
             if (flexItem.classList.contains("flex-slide-item-active")) {
@@ -99,8 +92,6 @@ const flexSlideActive = () => {
         });
     });
 }
+
 createContent();
 flexSlideActive();
-
-
-
