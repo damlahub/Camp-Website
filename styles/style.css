@@ -406,7 +406,7 @@
     background-color: var(--white);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
 }
@@ -418,4 +418,13 @@
 }
 .faq-content{
     width: 60%;
+    height: 30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.faq-content .faq-question{
+    padding: 10px;
+    background-color: var(--light-green);
 }

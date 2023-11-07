@@ -50,7 +50,7 @@ const sliderController= ()=>{
   function updateSlider() {
     // 4 resmim olduğu için 400 yazdım.
     const transformValue = -count * 200 / slider.children.length + '%';
-    console.log(transformValue);
+    // console.log(transformValue);
     slider.style.transform = 'translateX(' + transformValue + ')';
   }
   setInterval(nextSlide, 3000);
