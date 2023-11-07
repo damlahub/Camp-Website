@@ -43,10 +43,9 @@ const createContent = () => {
         `;
         accommodation.append(flexSlideContent);
     });
-    console.log(accommodationArr.length);
     setTimeout(() => {
-        let counter = accommodationArr.length;
-        document.querySelectorAll(".accommodation-flex-slide-item")[counter - 1].click();
+        let counterAccommodation = accommodationArr.length;
+        document.querySelectorAll(".accommodation-flex-slide-item")[counterAccommodation - 1].click();
     }, 1000);
 
 }
