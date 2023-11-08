@@ -15,7 +15,7 @@
             <!-- INTRO -->
             <section id="intro" class="page">
                 <button id="btn-next-menu">Atla</button>
-                <article class="intro-content intro-hidden">
+                <article class="intro-content intro-hidden d-flex-col">
                 </article>
                 <video autoplay  muted>
                     <source src="assets/intro/intro.mp4" type="video/mp4">
@@ -23,7 +23,7 @@
             </section>
             <!-- HOME PAGE -->
             <section id="home-page" class="page">
-                <header class="home-page-header">
+                <header class="home-page-header d-flex-row">
                     <section class="header-logo">
                         <a href="#">
                             <img src="assets/logo.png" alt="keyfkamp">
@@ -32,15 +32,6 @@
                     </section>
                     <nav class="header-nav">
                         <ul>
-                            <!--
-                            <li><a href="">Ana Sayfa</a></li>
-                            <li><a href="">Kamp Alanı</a></li>
-                            <li><a href="">Konaklama</a></li>
-                            <li><a href="">Etkinlikler</a></li>
-                            <li><a href="">Restoran</a></li>
-                            <li><a href="">Galeri</a></li>
-                            <li><a href="">Konum</a></li>
-                         -->
                         </ul>
                     </nav>
                     <button class="btn-standart-sm">
@@ -50,7 +41,7 @@
                 </header>
                 <main>
                     <!-- Single Slider -->
-                    <section id="single-slider">
+                    <section id="single-slider" class="d-flex-col">
                         <h2>Merhaba Kamp Severler!</h2>
                         <p>
                             Doğanın kucakladığı bu özel kamp alanında sizi ağırlamaktan mutluluk duyuyoruz! Şehir
@@ -61,45 +52,93 @@
                             Rezervasyon Yap
                         </button>
                     </section>
+                    <!-- Accommodation -->
                     <section id="accommodation">
                         <h3 class="section-title-left"> Konaklama</h3>
                     </section>
-                    <section id="activity">
-                        <section class="activity-items">
+                    <!-- Activity -->
+                    <section id="activity" class="d-flex-row">
+                        <section class="activity-items d-flex-row">
                         </section>
                         <h3 class="section-title-right"> Aktiviteler</h3>
                     </section>
+                    <!-- Gallery -->
                     <section id="gallery">
                         <h3 class="section-title-left"> Galeri</h3>
                         <article class="slider-container">
                         </article>
                     </section>
+                    <!-- FAQ -->
                     <section id="faq">
                         <h3 class="section-title-center">Sık Sorulan Sorular</h3>
                         <section class="faq-content">
-                            <!-- <article class="faq-item">
-                                <div class="faq-question">
-                                    <p>Lorem ipsum dolor sit amet.</p>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>Lorem ipsum dolor sit amet.</p>
-                                </div>
-                            </article> -->
                         </section>
                     </section>
                 </main>
+                <footer>
+                    <section class="footer-logo">
+                        <a href="#">
+                            <img src="assets/logo.png" alt="keyfkamp">
+                        </a>
+
+                        <a href="#">
+                            <h1>KeyfKamp</h1>
+                        </a>
+                    </section>
+                    <nav class="footer-nav d-flex-col">
+                        <h1>Hızlı Menü</h1>
+                            <ul>
+                            </ul>
+                    </nav>
+                    <section class="footer-contact">
+                        <section class="footer-info">
+                            <h1>Bize Ulaşın</h1>
+                            <ul class="footer-info-items">
+                                <li>
+                                    <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                                    <p>(xxx) xxx xx xx</p>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="footer-social-medias">
+                            <h1>Sosyal Medyalarımız</h1>
+                            <div class="footer-social-media">
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
+                                    </a>
+                            </div>
+                        </section>
+                    </section>
+                    <section class="footer-sub d-flex-col">
+                        <h1>Fırsatları Kaçırmayın!</h1>
+                        <input type="email" name="email" id="email" placeholder="Mailinizi Giriniz...">
+                        <button class="btn-standart">ABONE OL!</button>
+                    </section>
+                </footer>
             </section>
         </section>
     </section>
-    <script src="https://kit.fontawesome.com/bb9da9ae22.js" crossorigin="anonymous"></script>
     <script src="apps/intro-settings.js"></script>
     <script src="apps/intro.js"></script>
     <script src="apps/slider.js"></script>
-    <script src="apps/header-nav-settings.js"></script>
+    <script src="apps/nav-settings.js"></script>
     <script src="apps/activity-settings.js"></script>
     <script src="apps/flex-slide.js"></script>
     <script src="apps/accordion.js"></script>
     <script src="apps/faq.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/bb9da9ae22.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

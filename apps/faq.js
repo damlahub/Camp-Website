@@ -1,26 +1,25 @@
 const faq = [
     {
-        question: "Soru1",
-        answer: "Cevap 1"
+        question: "Güvenli Turizm Sertifikası",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure laborum enim ratione vel, cumque deserunt est, nihil consectetur, exercitationem recusandae? Iste illum non ratione dolorem earum? Totam, beatae magni."
     },
     {
-        question: "Soru2",
-        answer: "Cevap 2"
+        question: "Covid-19 (Corona) için önlem aldınız mı?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure laborum enim ratione vel, cumque deserunt est, nihil consectetur, exercitationem recusandae? Iste illum non ratione dolorem earum? Totam, beatae magni."
     },
     {
-        question: "Soru3",
-        answer: "Cevap 3"
+        question: "Kampa Evcil Hayvan Kabul Ediyor Musunuz?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure laborum enim ratione vel, cumque deserunt est, nihil consectetur, exercitationem recusandae? Iste illum non ratione dolorem earum? Totam, beatae magni."
     },
     {
-        question: "Soru4",
-        answer: "Cevap 4"
+        question: "Kampta Yeme İçme İhtiyaçlarımızı Nasıl Gideririz?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure laborum enim ratione vel, cumque deserunt est, nihil consectetur, exercitationem recusandae? Iste illum non ratione dolorem earum? Totam, beatae magni."
     },
     {
-        question: "Soru5",
-        answer: "Cevap 5"
-    },
+        question: "KeyfKamp'a Ulaşım Nasıl Sağlanır?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure laborum enim ratione vel, cumque deserunt est, nihil consectetur, exercitationem recusandae? Iste illum non ratione dolorem earum? Totam, beatae magni."
+    }
 ];
-
 const createFaqElements = () => {
     let faqContent = document.querySelector(".faq-content");
 
@@ -29,10 +28,10 @@ const createFaqElements = () => {
         let faqItemArticle = document.createElement("article");
         faqItemArticle.classList.add("faq-item");
         faqItemArticle.innerHTML = `
-        <div class="faq-question-${counter}">
-            <p>${faqItem.question}</p>
-        </div>
-        <div class="faq-answer-${counter}">
+        <button class="f${counter} faq-question">
+            ${faqItem.question}
+        </button>
+        <div class="faq-answer-${counter} faq-answer">
             <p>${faqItem.answer}</p>
         </div> 
         `;
@@ -41,21 +40,25 @@ const createFaqElements = () => {
 }
 
 const faqController = () => {
-    counter+=1;
     let allAnswers = document.querySelectorAll(".faq-answer");
     let allQuestions = document.querySelectorAll(".faq-question");
     let clickID =(event) => {
-        const clickedElementId = event.target.classList;
-        console.log("Tıklanan elementin ID'si:", clickedElementId);
+        const clickedElementId = event.target.classList[0];
+        const idNumber= clickedElementId.charAt(1);
+        
+        const answerElement = document.querySelector(`.faq-answer-${idNumber}`);
+        if (answerElement.style.display === "block") {
+              answerElement.style.display = "none";
+          } else {
+            answerElement.style.display = "block";
+          }
     }
     allAnswers.forEach(element => {
         element.style.display = "none";
     });
     allQuestions.forEach(element => {
-        element.addEventListener("click",clickID)
+        element.addEventListener("click",clickID);
     });
-
-
 }
 
 createFaqElements();
