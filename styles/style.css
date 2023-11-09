@@ -9,34 +9,28 @@
 }
 
 .btn-standart {
-    box-shadow: inset -2px -2px 0px 0px var(--dark-green);
     border-radius: 42px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--white);
     cursor: pointer;
-    color: var(--dark-green);
+    color: var(--white);
     font-size: 20px;
     font-weight: bold;
     padding: 15px 28px;
     transition: all .5s;
+    background-color: transparent;
 }
 
 .btn-standart-sm {
-    box-shadow: inset -2px -2px 0px 0px var(--dark-green);
     border-radius: 42px;
     border: 1px solid #ffffff;
     cursor: pointer;
     color: var(--dark-green);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 10px 25px;
     transition: all .5s;
+    background-color: var(--white);
 }
-
-.btn-standart:hover {
-    background-color: transparent;
-    color: var(--white);
-}
-
 .section-title-left,
 .section-title-right {
     border-bottom: 1px solid var(--light-green);
@@ -370,10 +364,10 @@
 
 #gallery {
     width: 100%;
-    height: 65vh;
+    height: 70vh;
     display: flex;
     align-items: center;
-    background-color: var(--light-green);
+    background-color: var(--dark-green);
     position: relative;
 }
 
@@ -382,14 +376,16 @@
     color: var(--white);
     position: absolute;
     z-index: 55;
+    width: 10%;
 }
 
 /* Slider */
 .slider-container {
-    width: 100%;
+    width: 90%;
     height: 65vh;
     overflow: hidden;
     position: absolute;
+    right: 0;
 }
 
 .slider {
@@ -401,6 +397,8 @@
     width: 25%;
     height: 65vh;
     object-fit: cover;
+    padding: 5px;
+    /* border-radius: 35px; */
 }
 
 #faq {
@@ -555,3 +553,44 @@ footer{
 .footer-sub input:active{ background-color: transparent;}
 .footer-sub input::placeholder{ color: white;}
 .footer-sub input:focus{ outline: none;}
+
+
+.modal {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    z-index: 59;
+  }
+  
+  .modal-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 50px;
+    background-color: var(--opacity-black);
+    color: var(--white);
+    font-size: 18px;
+  }
+  .modal-buttons {
+    width: 15%;
+    justify-content: space-evenly;
+  }
+    .modal-buttons button{
+        padding: 10px;
+        background-color: var(--white);
+        border: none;
+        font-weight: bold;
+    }
+    .modal-content p{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 35px;
+    cursor: pointer;
+  }

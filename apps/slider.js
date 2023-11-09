@@ -49,7 +49,7 @@ const sliderController= ()=>{
   }
   function updateSlider() {
     // 4 resmim olduğu için 400 yazdım.
-    const transformValue = -count * 200 / slider.children.length + '%';
+    const transformValue = -count * 325 / slider.children.length + '%';
     // console.log(transformValue);
     slider.style.transform = 'translateX(' + transformValue + ')';
   }
