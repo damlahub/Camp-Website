@@ -1,6 +1,5 @@
 const HEADER_NAV_ITEMS = [
     "Ana Sayfa",
-    "Kamp Alanı",
     "Konaklama",
     "Etkinlikler",
     "Restoran",

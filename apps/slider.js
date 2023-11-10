@@ -11,6 +11,8 @@ const sliderItems=[
   "assets/slider/4.jpg",
   "assets/slider/2.jpg",
   "assets/slider/3.jpg",
+  "assets/slider/1.jpg",
+  "assets/slider/3.jpg",
   "assets/slider/1.jpg"
 ];
 const sliderCreate=()=>{
@@ -49,7 +51,7 @@ const sliderController= ()=>{
   }
   function updateSlider() {
     // 4 resmim olduğu için 400 yazdım.
-    const transformValue = -count * 325 / slider.children.length + '%';
+    const transformValue = -count * 150/ slider.children.length + '%';
     // console.log(transformValue);
     slider.style.transform = 'translateX(' + transformValue + ')';
   }
