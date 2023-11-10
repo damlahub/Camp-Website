@@ -34,7 +34,7 @@ const accommodationArr = [
 const accommodation = document.querySelector("#accommodation");
 const createContent = () => {
     accommodationArr.forEach((arr, index) => {
-        let flexSlideContent = document.createElement("section");
+        let flexSlideContent = document.createElement("div");
         flexSlideContent.classList.add("accommodation-flex-slide-item");
 
         flexSlideContent.innerHTML = `

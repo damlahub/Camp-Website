@@ -17,7 +17,7 @@ const sliderItems=[
 ];
 const sliderCreate=()=>{
   let createSliderContainer=document.querySelector(".slider-container");
-  let createSlider=document.createElement("article");
+  let createSlider=document.createElement("div");
   createSlider.classList.add("slider");
 
   sliderItems.forEach(element => {

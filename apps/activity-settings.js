@@ -34,7 +34,7 @@ const ACTIVITY_SPAN_ITEMS = [
 const ACTIVITY_ITEMS = document.querySelector(".activity-items");
 
 ACTIVITY_H4_ITEMS.forEach((item_h4, index) => {
-    let activityContent = document.createElement("article");
+    let activityContent = document.createElement("div");
     activityContent.classList.add("activity-item");
     
     let itemH4 = document.createElement("h4");

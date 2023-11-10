@@ -15,8 +15,8 @@
             <!-- INTRO -->
             <section id="intro" class="page">
                 <button id="btn-next-menu">Atla</button>
-                <article class="intro-content intro-hidden d-flex-col">
-                </article>
+                <div class="intro-content intro-hidden d-flex-col">
+                </div>
                 <video autoplay  muted>
                     <source src="assets/intro/intro.mp4" type="video/mp4">
                 </video>
@@ -24,7 +24,7 @@
             <!-- HOME PAGE -->
             <section id="home-page" class="page">
                 <!-- Modal -->
-                <div id="modal" class="modal">
+                <section id="modal" class="modal">
                     <div class="modal-content d-flex-col">
                       <span class="close" onclick="closeModal()">&times;</span>
                       <p>Bu internet sitesinde, kullanıcı deneyimini geliştirmek ve internet sitesinin verimli çalışmasını sağlamak amacıyla çerezler kullanılmaktadır. Bu internet sitesini kullanarak bu çerezlerin kullanılmasını kabul etmiş olursunuz.</p>
@@ -33,21 +33,20 @@
                             <button onclick="closeModal()">Tümünü Reddet</button>
                         </div>
                     </div>
-                  </div>
+                </section>
                   <!-- Header -->
                 <header class="home-page-header d-flex-row">
-                    <section class="header-logo">
+                    <div class="header-logo">
                         <a href="#">
                             <img src="assets/logo.png" alt="keyfkamp">
                             <h1>KeyfKamp</h1>
                         </a>
-                    </section>
+                    </div>
                     <nav class="header-nav">
                         <ul>
                         </ul>
                     </nav>
                     <button class="btn-standart-sm">
-                        <!-- <i class="fa-solid fa-campground" style="color: var(--white);"></i> -->
                         Rezervasyon
                     </button>
                 </header>
@@ -70,21 +69,21 @@
                     </section>
                     <!-- Activity -->
                     <section id="activity" class="d-flex-row">
-                        <section class="activity-items d-flex-row">
-                        </section>
+                        <div class="activity-items d-flex-row">
+                        </div>
                         <h3 class="section-title-right"> Aktiviteler</h3>
                     </section>
                     <!-- Gallery -->
                     <section id="gallery">
                         <h3 class="section-title-left"> Galeri</h3>
-                        <article class="slider-container">
-                        </article>
+                        <div class="slider-container">
+                        </div>
                     </section>
                     <!-- FAQ -->
                     <section id="faq">
                         <h3 class="section-title-center">Sık Sorulan Sorular</h3>
-                        <section class="faq-content">
-                        </section>
+                        <div class="faq-content">
+                        </div>
                     </section>
                 </main>
                 <footer>
