@@ -25,11 +25,12 @@ const createFaqElements = () => {
 
     faq.forEach((faqItem, counter) => {
         counter += 1;
-        let faqItemArticle = document.createElement("article");
+        let faqItemArticle = document.createElement("div");
         faqItemArticle.classList.add("faq-item");
         faqItemArticle.innerHTML = `
         <button class="f${counter} faq-question">
             ${faqItem.question}
+            <span class="faq-char">+</span>
         </button>
         <div class="faq-answer-${counter} faq-answer">
             <p>${faqItem.answer}</p>
@@ -42,22 +43,30 @@ const createFaqElements = () => {
 const faqController = () => {
     let allAnswers = document.querySelectorAll(".faq-answer");
     let allQuestions = document.querySelectorAll(".faq-question");
-    let clickID =(event) => {
+    let clickID = (event) => {
         const clickedElementId = event.target.classList[0];
-        const idNumber= clickedElementId.charAt(1);
-        
+        const idNumber = clickedElementId.charAt(1);
+
+        let faqChar = document.querySelectorAll(`.f${idNumber} .faq-char`);
+
         const answerElement = document.querySelector(`.faq-answer-${idNumber}`);
         if (answerElement.style.display === "block") {
-              answerElement.style.display = "none";
-          } else {
+            answerElement.style.display = "none";
+            faqChar.forEach(element => {
+                element.innerHTML = "+";
+            });
+        } else {
             answerElement.style.display = "block";
-          }
+            faqChar.forEach(element => {
+                element.innerHTML = "-";
+            });
+        }
     }
     allAnswers.forEach(element => {
         element.style.display = "none";
     });
     allQuestions.forEach(element => {
-        element.addEventListener("click",clickID);
+        element.addEventListener("click", clickID);
     });
 }
 
