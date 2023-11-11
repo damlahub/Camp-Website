@@ -5,6 +5,10 @@ window.onload = () => {
     let btnNextMenu = document.querySelector("#btn-next-menu");
     let container=document.querySelector(".container");
 
+    setTimeout(function() {
+        INTRO_VIDEO.pause();
+        slide();
+    },  28000)
     btnNextMenu.addEventListener("click", () => {
         slide();
     });
@@ -26,9 +30,9 @@ window.onload = () => {
     <h1>${INTRO_TEXT}</h1>`;
     }, INTRO_TEXT_TIME);
 
-    INTRO_VIDEO.onended = () => {
-        slide();
-    };
+    // INTRO_VIDEO.onended = () => {
+    //     slide();
+    // };
 
     // Slide
     const innerWidth = window.innerWidth;

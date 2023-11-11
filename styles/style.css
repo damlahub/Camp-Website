@@ -6,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poiret One', sans-serif;
+    scroll-behavior: smooth;
 }
 .btn-standart {
     border-radius: 42px;
@@ -362,13 +363,13 @@
     height: 70vh;
     display: flex;
     align-items: center;
-    background-color: var(--dark-green);
+    background-color: var(--white);
     position: relative;
 }
 
 #gallery h3 {
     font-size: 45px;
-    color: var(--white);
+    color: var(--dark-green);
     position: absolute;
     z-index: 55;
     width: 10%;
@@ -444,7 +445,7 @@
 
 .faq-answer {
     width: 100%;
-    padding: 10px 20px;
+    padding: 15px 20px;
     background-color: var(--dark-green-opacity);
     transition: all 0.5s ease-in-out;
     border-left: 5px solid var(--dark-green);
@@ -478,6 +479,7 @@ footer{
 
 .footer-logo img {
     width: 80%;
+    filter: brightness(400%);
 }
 
 .footer-nav {
