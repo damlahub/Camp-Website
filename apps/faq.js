@@ -41,34 +41,42 @@ const createFaqElements = () => {
 }
 
 const faqController = () => {
-    let allAnswers = document.querySelectorAll(".faq-answer");
-    let allQuestions = document.querySelectorAll(".faq-question");
-    let clickID = (event) => {
-        const clickedElementId = event.target.classList[0];
-        const idNumber = clickedElementId.charAt(1);
-
-        let faqChar = document.querySelectorAll(`.f${idNumber} .faq-char`);
-
-        const answerElement = document.querySelector(`.faq-answer-${idNumber}`);
-        if (answerElement.style.display === "block") {
-            answerElement.style.display = "none";
-            faqChar.forEach(element => {
-                element.innerHTML = "+";
-            });
-        } else {
-            answerElement.style.display = "block";
-            faqChar.forEach(element => {
-                element.innerHTML = "-";
-            });
-        }
-    }
-    allAnswers.forEach(element => {
-        element.style.display = "none";
-    });
-    allQuestions.forEach(element => {
-        element.addEventListener("click", clickID);
-    });
+    let faqItem=document.querySelectorAll(".faq-item");
+    faqItem.forEach((item)=>{
+        item.addEventListener("click",()=>{
+                item.classList.contains("active") ? item.classList.remove("active"):item.classList.add("active");
+        });
+    })
 }
+// const faqController = () => {
+//     let allAnswers = document.querySelectorAll(".faq-answer");
+//     let allQuestions = document.querySelectorAll(".faq-question");
+//     let clickID = (event) => {
+//         const clickedElementId = event.target.classList[0];
+//         const idNumber = clickedElementId.charAt(1);
+
+//         let faqChar = document.querySelectorAll(`.f${idNumber} .faq-char`);
+
+//         const answerElement = document.querySelector(`.faq-answer-${idNumber}`);
+//         if (answerElement.style.display === "block") {
+//             answerElement.style.display = "none";
+//             faqChar.forEach(element => {
+//                 element.innerHTML = "+";
+//             });
+//         } else {
+//             answerElement.style.display = "block";
+//             faqChar.forEach(element => {
+//                 element.innerHTML = "-";
+//             });
+//         }
+//     }
+//     allAnswers.forEach(element => {
+//         element.style.display = "none";
+//     });
+//     allQuestions.forEach(element => {
+//         element.addEventListener("click", clickID);
+//     });
+// }
 
 createFaqElements();
 faqController();

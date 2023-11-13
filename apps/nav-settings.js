@@ -8,7 +8,7 @@ const HEADER_NAV_ITEMS = [
         href: "#accommodation"
     },
     {
-        name: "Etkinlikler",
+        name: "Aktiviteler",
         href: "#activity"
     },
     {

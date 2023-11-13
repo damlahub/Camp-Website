@@ -4,6 +4,7 @@ window.onload = () => {
     let _introContent = document.querySelector(".intro-content");
     let btnNextMenu = document.querySelector("#btn-next-menu");
     let container=document.querySelector(".container");
+    container.style.overflow="hidden";
 
     setTimeout(function() {
         INTRO_VIDEO.pause();
@@ -40,7 +41,7 @@ window.onload = () => {
         INTRO.style.left = `-${innerWidth}px`;
         setTimeout(() => {
             INTRO.remove();
-            container.style.overflow="auto";
+            container.style.overflow="";
         }, 2100);
     };
 };
