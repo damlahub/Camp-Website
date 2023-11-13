@@ -43,8 +43,10 @@ const createFaqElements = () => {
 const faqController = () => {
     let faqItem=document.querySelectorAll(".faq-item");
     faqItem.forEach((item)=>{
-        item.addEventListener("click",()=>{
-                item.classList.contains("active") ? item.classList.remove("active"):item.classList.add("active");
+        item.addEventListener("click", () => {
+            let faqChar = item.querySelector('.faq-char');
+            item.classList.toggle("active");
+            faqChar.innerHTML = item.classList.contains("active") ? "-" : "+";
         });
     })
 }
