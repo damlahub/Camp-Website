@@ -21,7 +21,7 @@ const HEADER_NAV_ITEMS = [
     },
     {
         name: "Konum",
-        href: "#konum"
+        href: "#location"
     }
 ];
 let headerMenu=document.querySelector(".header-nav>ul");
