@@ -1,7 +1,7 @@
 const HEADER_NAV_ITEMS = [
     {
         name: "Ana Sayfa",
-        href: "#header"
+        href: "#"
     },
     {
         name: "Konaklama",
@@ -10,10 +10,6 @@ const HEADER_NAV_ITEMS = [
     {
         name: "Aktiviteler",
         href: "#activity"
-    },
-    {
-        name: "Restoran",
-        href: "#restoran"
     },
     {
         name: "Galeri",

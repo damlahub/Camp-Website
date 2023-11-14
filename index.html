@@ -18,7 +18,7 @@
                 <button id="btn-next-menu">Atla</button>
                 <div class="intro-content intro-hidden d-flex-col">
                 </div>
-                <video autoplay  muted>
+                <video autoplay muted>
                     <source src="assets/intro/intro.mp4" type="video/mp4">
                 </video>
             </section>
@@ -27,15 +27,24 @@
                 <!-- Modal -->
                 <section id="modal" class="modal">
                     <div class="modal-content d-flex-col">
-                      <span class="close" onclick="closeModal()">&times;</span>
-                      <p>Bu internet sitesinde, kullanıcı deneyimini geliştirmek ve internet sitesinin verimli çalışmasını sağlamak amacıyla çerezler kullanılmaktadır. Bu internet sitesini kullanarak bu çerezlerin kullanılmasını kabul etmiş olursunuz.</p>
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <p>Bu internet sitesinde, kullanıcı deneyimini geliştirmek ve internet sitesinin verimli
+                            çalışmasını sağlamak amacıyla çerezler kullanılmaktadır. Bu internet sitesini kullanarak bu
+                            çerezlerin kullanılmasını kabul etmiş olursunuz.</p>
                         <div class="modal-buttons d-flex-row">
                             <button onclick="closeModal()">Kabul Et</button>
                             <button onclick="closeModal()">Tümünü Reddet</button>
                         </div>
                     </div>
                 </section>
-                  <!-- Header -->
+                <!-- Back to Top -->
+                <section id="back-to-top">
+                    <div class="back-container">
+                        <a href="#" title="Başa Dön"><i class="fa-solid fa-tree"
+                                style="color: var(--dark-green);"></i></a>
+                    </div>
+                </section>
+                <!-- Header -->
                 <header id="header" class="home-page-header d-flex-row">
                     <div class="header-logo">
                         <a href="#">
@@ -82,25 +91,35 @@
                     </section>
                     <!-- FAQ -->
                     <section id="faq">
-                        <h3 class="section-title-center">Sık Sorulan Sorular</h3>
+                        <section class="faq-container">
                         <div class="faq-content">
                         </div>
+                        <h3 class="section-title-right">Sorular</h3>
                     </section>
-                    <section id="location">
-                        <h3 class="section-title-center">Konum</h3>
-                        <div class="address d-flex-row">
-                            <div class="address-info d-flex-col">
-                                <p>
-                                    <i class="fa-solid fa-location-dot" style="color: var(--green);"></i>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quod culpa cupiditate eaque cum!
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-phone" style="color: var(--green);"></i>
-                                    (xxx) xxx xx xx
-                                </p>
+                        <!-- Location -->
+                        <section id="location">
+                            <h3 class="section-title-left">Konum</h3>
+                            <div class="address">
+                                <div class="address-info">
+                                    <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.528895569863!2d29.39611327605065!3d41.21024337132295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409fd1d75286a421%3A0xa935e6716508a199!2sSahil%20Kamp%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1699890620156!5m2!1str!2str"
+                                    width="450px" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <p>
+                                        <i class="fa-solid fa-location-dot" style="color: var(--green);"></i>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quod culpa
+                                        cupiditate eaque cum!
+                                    </p>
+                                    <p>
+                                        <i class="fa-solid fa-phone" style="color: var(--green);"></i>
+                                        (xxx) xxx xx xx
+                                    </p>
+                                </div>
+                           
                             </div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.528895569863!2d29.39611327605065!3d41.21024337132295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409fd1d75286a421%3A0xa935e6716508a199!2sSahil%20Kamp%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1699890620156!5m2!1str!2str" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                        </div>
+                        </section>
                     </section>
+
                 </main>
                 <footer>
                     <section class="footer-logo">
@@ -114,8 +133,8 @@
                     </section>
                     <nav class="footer-nav d-flex-col">
                         <h1>Hızlı Menü</h1>
-                            <ul>
-                            </ul>
+                        <ul>
+                        </ul>
                     </nav>
                     <section class="footer-contact">
                         <section class="footer-info">
@@ -134,15 +153,15 @@
                         <section class="footer-social-medias">
                             <h1>Bizi Takip Edin!</h1>
                             <div class="footer-social-media">
-                                    <a href="#">
-                                        <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
-                                    </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff;"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i>
+                                </a>
                             </div>
                         </section>
                     </section>

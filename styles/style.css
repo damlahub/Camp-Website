@@ -144,11 +144,9 @@
 .home-page-header {
     width: 100%;
     height: 65px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: var(--dark-green);
     z-index: 80;
-    /* position: relative; */
-    /* transition: dropAnimation .5s ease-out; */
 }
 
 .home-page-header .header-logo {
@@ -174,7 +172,7 @@
 }
 
 .home-page-header .header-nav ul {
-    width: 100%;
+    width: 80%;
     height: 65px;
     display: flex;
     justify-content: space-around;
@@ -405,7 +403,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    /* padding: 50px; */
+    padding: 50px 0;
     background-image: url(../assets/slider/3.jpg );
     background-attachment: fixed;
     background-size: cover;
@@ -414,16 +413,19 @@
     background-color: var(--opacity-black);
 }
 
-#faq h3{
+.faq-container h3 {
     font-size: 45px;
     color: var(--white);
-    z-index: 55;
-    border-bottom: 1px solid var(--white);
-    height: 10vh;
-    margin-bottom: 35px;
 }
-
+.faq-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    align-items: center;
+}
 .faq-content {
+    margin: 0 auto;
     width: 70%;
     height: 100%;
 }
@@ -469,22 +471,34 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 25px;
-    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    /* background-color: var(--white); */
 }
 #location h3{
     width: 10%;
     font-size: 45px;
-    color: var(--dark-green) ;
+    color: var(--white) ;
     border-bottom: 1px solid var(--light-green);
     text-align: center;
     margin: 20px auto;
 }
 .address{
+    width: 90%;
+
+}
+.address-info{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .address p{
-    width: 65%;
-    margin-bottom: 20px;
+    width:35%;
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
 }
 footer{
     width: 100%;
@@ -595,9 +609,8 @@ footer{
     width: 100%;
     height: auto;
     background-color: rgb(0, 0, 0);
-    z-index: 59;
+    z-index: 85;
   }
-  
   .modal-content {
     width: 100%;
     position: absolute;
@@ -628,3 +641,19 @@ footer{
     font-size: 35px;
     cursor: pointer;
   }
+#back-to-top{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 80;
+}
+.back-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-green);
+    border: 2px solid var(--cream);
+    border-radius: 100%;
+    padding: 10px;
+}
