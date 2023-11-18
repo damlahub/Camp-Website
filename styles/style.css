@@ -403,7 +403,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 50px; */
     padding: 50px 0;
     background-image: url(../assets/slider/3.jpg );
     background-attachment: fixed;
@@ -420,8 +419,6 @@
 .faq-container{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 60px;
     align-items: center;
 }
 .faq-content {
@@ -469,33 +466,31 @@
 /* Location */
 #location{
     width: 100%;
-    padding-top: 10px;
+    padding-top:25px;
     padding-bottom: 25px;
     display: flex;
     align-items: center;
-    /* background-color: var(--white); */
+    justify-content: space-between;
 }
 #location h3{
     width: 10%;
     font-size: 45px;
-    color: var(--white) ;
+    color: var(--dark-green) ;
     border-bottom: 1px solid var(--light-green);
     text-align: center;
     margin: 20px auto;
 }
 .address{
     width: 90%;
-
 }
 .address-info{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 .address p{
     width:35%;
-    color: var(--white);
+    color: var(--dark-green);
     text-align: center;
     font-weight: bold;
     margin-top: 15px;

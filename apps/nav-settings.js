@@ -16,6 +16,10 @@ const HEADER_NAV_ITEMS = [
         href: "#gallery"
     },
     {
+        name: "S.S.S",
+        href: "#faq"
+    },
+    {
         name: "Konum",
         href: "#location"
     }

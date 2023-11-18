@@ -55,8 +55,7 @@ const sliderController= ()=>{
     // console.log(transformValue);
     slider.style.transform = 'translateX(' + transformValue + ')';
   }
-  setInterval(nextSlide, 3000);
-  
+  setInterval(nextSlide, 2000);
 }
 sliderCreate();
 sliderController();
